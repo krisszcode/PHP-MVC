@@ -1,0 +1,15 @@
+{
+    "name": "krissz/phpproj",
+    "authors": [
+        {
+            "name": "krisszcode",
+            "email": "nagy.ace.krisztian@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
