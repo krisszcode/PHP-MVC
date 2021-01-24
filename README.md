@@ -1,6 +1,6 @@
 # PHP MVC
 
-This a MVC(Model-View-Controller) pattern based project written in PHP, this is a currently running project.
+This is a MVC(Model-View-Controller) pattern based project written in PHP, this is a currently running project.
 
 ### Installation!
 
