@@ -3,6 +3,7 @@
 namespace app\core;
 use app\core\Application;
 use app\migrations\m0001_initial;
+use app\migrations\m0002_add_password_column;
 
 class Database
 {
@@ -36,11 +37,22 @@ class Database
             // $className = pathinfo($migration, PATHINFO_FILENAME);
             // var_dump(Application::$ROOT_DIR . '/migrations/' . $migration, $className);
             // $instance = $className();
-            $instance = new m0001_initial();
-            $this->log("Applying migration $migration");
-            $instance->up();
-            $this->log("Applied migration $migration");
-            $newMigrations[] = $migration;
+            $className = pathinfo($migration, PATHINFO_FILENAME);
+            if($className === "m0001_initial"){
+                $instance = new m0001_initial();
+                $this->log("Applying migration $migration");
+                $instance->up();
+                $this->log("Applied migration $migration");
+                $newMigrations[] = $migration;
+            }
+            if($className === "m0002_add_password_column"){
+                $instance = new m0002_add_password_column();
+                $this->log("Applying migration $migration");
+                $instance->up();
+                $this->log("Applied migration $migration");
+                $newMigrations[] = $migration;
+            }
+
         }
 
         if (!empty($newMigrations)) {
@@ -50,6 +62,8 @@ class Database
             $this->log("All migrations are applied");
         }
     }
+
+
 
 
     public function createMigrationsTable()
