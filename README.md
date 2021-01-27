@@ -1,6 +1,6 @@
 # PHP MVC
 
-This a MVC(Model-View-Controller) pattern based project written in PHP, this is a currently running project.
+This is a MVC(Model-View-Controller) pattern based project written in PHP, this is a currently running project.
 
 ### Installation!
 
@@ -15,7 +15,7 @@ This a MVC(Model-View-Controller) pattern based project written in PHP, this is 
     composer install 
     ```
 6. When the installation finished, rename the .env.example file to .env.
-7. Then you can run the project with:
+7. Then you can run the project in the public folder with:
     ```sh
     php -S localhost:8000
     ```
